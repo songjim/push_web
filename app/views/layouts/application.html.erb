@@ -12,8 +12,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-		<%= render "layouts/header"%>
-	  <%= render "layouts/sidebar"%>
-	<%= yield %>
+   <% if user_signed_in? %>
 
-<%= render "layouts/footer" %>
+		<%= render "layouts/header"%>
+
+	  <%= render "layouts/sidebar"%>
+      <%= yield %>
+    <%= render "layouts/footer" %>
+                 </div>
+                                <!-- /.col-lg-6 (nested) -->
+                                
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+  <%else%>
+  <%= yield %>
+  <%end%>
+
+</body>
+
+</html>
