@@ -8,7 +8,13 @@
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
 
+set :rails_env, "production"
+set :rack_env, "production"
 
+set :rvm_type, :system
+set :rvm_ruby_version, '2.1.5'
+server '139.129.49.111',  user: 'root', roles: %w{web app db}, :primary => true
+set :sidekiq_role, :app
 # role-based syntax
 # ==================
 

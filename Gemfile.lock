@@ -214,7 +214,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
-  mysql2 (>= 0.3.13, < 0.5)
+  mysql2
   rails (= 4.2.5.2)
   rest-client!
   rolify
