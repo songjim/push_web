@@ -27,10 +27,10 @@ gem "rest-client", git: 'https://gitlab.baozou.com/rails/rest-client.git'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :developmentgem
+gem 'capistrano-rails', group: :developmentgem
 gem "rolify"
 # gem 'cancancan', '~> 1.10'
 gem 'devise'
