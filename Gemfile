@@ -28,15 +28,14 @@ gem "rest-client", git: 'https://gitlab.baozou.com/rails/rest-client.git'
 
 # Use Unicorn as the app server
 gem 'unicorn'
-
+gem 'uglifier', '>= 1.3.0'
 # Use Capistrano for deployment
 group :development do
 	gem 'capistrano-rails' 
-  gem 'capistrano-rails'
   gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano3-unicorn'
- end
+end
 gem "rolify"
 # gem 'cancancan', '~> 1.10'
 gem 'devise'
