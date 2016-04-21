@@ -21,29 +21,7 @@ module PushWeb
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.assets.precompile << proc.new do |path|
-      if path =~ /\.(css|js |scss|png|jpg|gif|js on)\z/
-        full_path = rails.application.assets.resolve(path).to_path
-        app_assets_path1 = rails.root.join('app', 'assets').to_path
-        app_assets_path2 = rails.root.join('public', 'assets').to_path
-        app_assets_path3 = rails.root.join('vendor', 'assets').to_path
 
-        if full_path.starts_with? app_assets_path1
-           true
-        else
-          if full_path.starts_with? app_assets_path2
-            true
-          else
-            if full_path.starts_with? app_assets_path3
-              true
-            else
-              false
-            end
-          end
-        end
-      end
-    end
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
-
