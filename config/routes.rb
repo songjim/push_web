@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root to: "home#index"
   get 'push', to: 'push#index'
   post 'push/send_go', to: 'push#send_go'
+  get 'push/save_phone', to: 'push#save_phone'
+  post 'push/phone_install',to: 'push#phone_install'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

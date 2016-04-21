@@ -12,17 +12,19 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>
+                        </li> -->
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>功能<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Flot Charts</a>
+                                    <%=link_to '存入手机型号', push_save_phone_path%>
+                                    <!-- <a href="flot.html"></a> -->
                                 </li>
                                 <li>
-                                    <a href="morris.html">Morris.js Charts</a>
+                                    <%=link_to '推送', push_path%>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
