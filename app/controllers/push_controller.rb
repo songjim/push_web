@@ -5,8 +5,9 @@ class PushController < ApplicationController
 	end
 	def send_go
 		par = params[:message]
+		p par
 		userId = params[:userId]
-		res = RestClient.post 'http://localhost:8080/push',{ 'message' => 1 }.to_json, :content_type => :json, :accept => :json
+		res = RestClient.post 'http://139.129.49.111:81/push',{ 'message' => par,'userId' => userId }
 		render :text => res
 	end
 	def save_phone
