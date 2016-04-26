@@ -6,7 +6,8 @@ class PushController < ApplicationController
 	def send_go
 		par = params[:message]
 		p par
-		userId = params[:userId]
+		userId = params[:userId].to_i
+		p userId
 		res = RestClient.post 'http://139.129.49.111:81/push',{ 'message' => par,'userId' => userId }
 		render :text => res
 	end
