@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post 'push/send_go', to: 'push#send_go'
   get 'push/save_phone', to: 'push#save_phone'
   post 'push/phone_install',to: 'push#phone_install'
+  get 'push/down_andorid_app', to: 'push#down_andorid_app'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
