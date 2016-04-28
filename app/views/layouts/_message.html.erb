@@ -1,0 +1,19 @@
+<% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+        <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
+          <a class="close" data-dismiss="alert">&#215;</a>
+          <li><%= msg %></li>
+        </div>
+    <% else %>
+        <% msg.each do |k, v| %>
+            <% if v.present? %>
+                <% v.each do |m| %>
+                    <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
+                      <a class="close" data-dismiss="alert">&#215;</a>
+                      <li><%= m %></li>
+                <% end %>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>

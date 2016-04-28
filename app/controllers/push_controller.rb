@@ -27,7 +27,9 @@ class PushController < ApplicationController
     rescue Exception => e
       ErrorMailer.error_maile(e,nil).deliver
     end
-    render :text => "hello"
+    flash[:notice] = "success"
+    # render :text => "hello"
+    render action: "save_phone"
   end
 
   def down_andorid_app
