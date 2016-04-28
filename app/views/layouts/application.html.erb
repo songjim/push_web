@@ -15,8 +15,10 @@
    <% if user_signed_in? %>
 
 		<%= render "layouts/header"%>
+    <%= render "layouts/sidebar"%>
+    <div id="page-wrapper">
     <%= render "layouts/message"%>
-	  <%= render "layouts/sidebar"%>
+	  
     
       <%= yield %>
     <%= render "layouts/footer" %>

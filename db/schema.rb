@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421160523) do
+ActiveRecord::Schema.define(version: 20160428151937) do
 
   create_table "avos", force: :cascade do |t|
     t.string   "installation", limit: 255
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20160421160523) do
     t.datetime "updated_at",               null: false
     t.string   "name",         limit: 255
   end
+
+  add_index "avos", ["name", "installation"], name: "index_avos_on_name_and_installation", unique: true, using: :btree
 
   create_table "models", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
