@@ -7,6 +7,18 @@ Rails.application.routes.draw do
   get 'push/save_phone', to: 'push#save_phone'
   post 'push/phone_install',to: 'push#phone_install'
   get 'down_andorid_app', to: 'app_down#down_andorid_app'
+  # resources :users,:controller => "admin/users"
+  post "users/create_user", to: 'users#create_user'
+  get 'users/new', to: 'users#new'
+
+  get 'users/show', to: 'users#show'
+  get 'users/destroy', to: 'users#destroy'
+  get 'users/update', to: "users#update"
+  patch 'users/update_save', to: "users#update_save"
+  # end
+  get 'push/search', to: 'push#search'
+  # get 'users/new',to: 'users#new'
+  # post 'users/create',to: "users#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

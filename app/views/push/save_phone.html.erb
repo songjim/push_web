@@ -13,13 +13,18 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-lg-6">
-              <%= form_tag('/push/phone_install', multipart: true)%>
+              <%=form_for @avos, url: push_phone_install_path do |f|%>
+              <%#= form_tag('/push/phone_install', multipart: true)%>
                 <div class="form-group">
-                  <label>输入消息体</label>
+                  <label>选择用户：</label> 
+                  <%= select_tag "user", options_from_collection_for_select(@users, "id", "name", "1"),class: "form-control" %>
+
+                  <label>输入手机信息</label>
                   <input class="form-control" placeholder="手机名称" name= "phone_name">
                   <input class="form-control" placeholder="手机安装信息" name= "phone_install">
                 </div>
                 <button type="submit" class="btn btn-default">保存</button>
                 <button type="reset" class="btn btn-default">重置</button>
-              </from>
-         
+              <% end %>
+              <!-- </form> -->
+

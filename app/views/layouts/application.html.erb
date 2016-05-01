@@ -8,7 +8,7 @@
   <meta name="author" content="">
   <title>PushWeb</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -45,5 +45,16 @@
   <%end%>
 
 </body>
+<%= javascript_include_tag "application" %>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
+
+
+<%= content_for?(:afterBody) ? yield(:afterBody) : '' %>
 
 </html>
