@@ -1,0 +1,53 @@
+#用户id，用户名，最后登录，最后操作时间，收藏，吐槽，创建专辑，专辑评论，收藏专辑，
+#关注，粉丝，是否有加精，收到的赞，点出的赞，登录方式
+zh-CN:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 保存失败
+      models:
+        user:
+          attributes:
+            password:
+              confirmation: "两次密码不一致"
+              too_short: "密码太短（最少6位）"
+            reset_password_token:
+              invalid: "重置Token已经失效，请重新申请重置密码"
+            email:
+              blank: "邮箱不能为空"
+              taken: "邮箱已经存在"
+              invalid: "邮箱不合法"
+            password:
+              blank: "密码不能为空"
+              confirmation: "两次密码不相同"
+              too_short: "密码不少于6位"
+            name:
+              blank: 用户名必填
+            phone:
+              blank: 电话号码不能为空
+        platform_ad:
+          attributes:
+            name:
+              blank: "广告名称必填"
+        production:
+          attributes:
+            name:
+              blank: "产品名不能为空"
+            platform:
+              blank: "平台不为空"
+        role:
+          attributes:
+            name:
+              blank: "角色名不能为空"
+    attributes:
+      user:
+        id: 用户id
+        name: 用户名
+        created_at: 创建时间
+        current_sign_in_at: 最后登录user.
+        comic_favorite_count: 收藏
+        topic_count: 吐槽
+  devise:
+    sessions: 
+      user:
+      signed_in: "登录成功"
